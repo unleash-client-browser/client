@@ -19,6 +19,9 @@
     "url": "https://github.com/unleash-client-browser/client/issues"
   },
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist",
     "LICENSE",

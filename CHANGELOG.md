@@ -1,3 +1,10 @@
+### [1.0.1](https://github.com/unleash-client-browser/client/compare/v1.0.0...v1.0.1) (2021-05-14)
+
+
+### :repeat_one: CI
+
+* public package ([b78438e](https://github.com/unleash-client-browser/client/commit/b78438eda4d23f65652cced8ba0613a2b56117e3))
+
 ## 1.0.0 (2021-05-14)
 
 

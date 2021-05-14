@@ -18,6 +18,7 @@
   "bugs": {
     "url": "https://github.com/unleash-client-browser/client/issues"
   },
+  "private": false,
   "files": [
     "dist",
     "LICENSE",

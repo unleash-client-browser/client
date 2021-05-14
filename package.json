@@ -35,13 +35,14 @@
     "lint": "tsdx lint",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "semantic-release": "semantic-release"
   },
   "peerDependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint",
-      "commit-msg": "commitlint --edit \"$1\""
+      "commit-msg": "commitlint --edit $1"
     }
   },
   "prettier": {

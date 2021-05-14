@@ -1,0 +1,71 @@
+plugins:
+  - '@semantic-release/commit-analyzer'
+  - '@semantic-release/release-notes-generator'
+  - '@semantic-release/changelog'
+  - '@semantic-release/npm'
+  - - '@semantic-release/git'
+    - message: 'chore(release): ${nextRelease.gitTag}\n\n${nextRelease.notes}'
+  - '@semantic-release/github'
+
+preset: 'conventionalcommits'
+parserOpts:
+  noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES', 'BREAKING']
+releaseRules:
+  - header: '*!:*'
+    release: 'major'
+  - breaking: true
+    release: 'major'
+  - type: 'feat'
+    release: 'minor'
+  - type: 'perf'
+    release: 'minor'
+  - type: 'build'
+    release: 'patch'
+  - type: 'ci'
+    release: 'patch'
+  - type: 'docs'
+    release: 'patch'
+  - type: 'fix'
+    release: 'patch'
+  - type: 'style'
+    release: 'patch'
+  - type: 'test'
+    release: 'patch'
+  - type: 'chore'
+    release: 'patch'
+presetConfig:
+  types:
+    - type: 'feat'
+      section: ':sparkles: Features'
+      hidden: false
+    - type: 'perf'
+      section: ':rocket: Performance'
+      hidden: false
+    - type: 'fix'
+      section: ':bug: Fixes'
+      hidden: false
+    - type: 'docs'
+      section: ':book: Documentation'
+      hidden: false
+    - type: 'refactor'
+      section: ':recycle: Refactoring'
+      hidden: false
+    - type: 'test'
+      section: ':white_check_mark: Tests'
+      hidden: false
+    - type: 'build'
+      section: ':wrench: Build System'
+      hidden: false
+    - type: 'ci'
+      section: ':repeat_one: CI'
+      hidden: false
+    - type: 'style'
+      section: ':haircut: Code Style'
+      hidden: false
+    - type: 'chore'
+      section: ':cactus: Chores'
+      hidden: false
+
+branches:
+  - '+([0-9])?(.{+([0-9]),x}).x'
+  - 'main'

@@ -1,3 +1,11 @@
+### [1.0.2](https://github.com/unleash-client-browser/client/compare/v1.0.1...v1.0.2) (2021-05-17)
+
+
+### :repeat_one: CI
+
+* access public ([c6da058](https://github.com/unleash-client-browser/client/commit/c6da058f6cebdbca164f9adbf7feb54f091bfbe8))
+* release commit message ([1cec559](https://github.com/unleash-client-browser/client/commit/1cec5590d2ce093e6b138bef5cbdcae144fa65c7))
+
 ### [1.0.1](https://github.com/unleash-client-browser/client/compare/v1.0.0...v1.0.1) (2021-05-14)
 
 

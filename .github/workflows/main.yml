@@ -46,23 +46,24 @@ jobs:
       - name: Build
         run: yarn build
 
-  release:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs: [ lint, test, build ]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
-      - name: Use Node 14.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14.x
-      - name: Install deps and build (with cache)
-        uses: bahmutov/npm-install@v1
-      - name: Build
-        run: yarn build
-      - name: Release
-        run: yarn semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+### Disable releases before v1 ###
+#  release:
+#    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+#    needs: [ lint, test, build ]
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout repo
+#        uses: actions/checkout@v2
+#      - name: Use Node 14.x
+#        uses: actions/setup-node@v1
+#        with:
+#          node-version: 14.x
+#      - name: Install deps and build (with cache)
+#        uses: bahmutov/npm-install@v1
+#      - name: Build
+#        run: yarn build
+#      - name: Release
+#        run: yarn semantic-release
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
